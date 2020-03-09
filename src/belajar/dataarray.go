@@ -12,14 +12,29 @@ func Myarray() {
 	nama[2] = "RAfles"
 	nama[3] = "Melati"
 	nama[4] = "Agus"
-	for i, v := range nama {
-		fmt.Println("Index ke ", i, "=>", v)
+
+	for i := 0; i < len(nama); i++ {
+		fmt.Println("Index ke ", i, "=>", nama[i])
 	}
 
-	fmt.Println("=========ATAU===========")
-
-	for index := 0; index < len(nama); index++ {
-		fmt.Println("Index ke ", index, "=>", nama[index])
+}
+func arr_range() {
+	var fruits = [4]string{"apple", "grape", "banana", "melon"}
+	for i, fruit := range fruits {
+		fmt.Printf("elemen %d : %s\n", i, fruit)
 	}
+}
+func arr_underscore() {
+	var fruits = [4]string{"apple", "grape", "banana", "melon"}
+	for _, fruit := range fruits {
+		fmt.Printf("nama buah : %s\n", fruit)
+	}
+}
+func arr_multidimensi() {
+	var numbers1 = [2][3]int{[3]int{3, 2, 3}, [3]int{3, 4, 5}}
+	var numbers2 = [2][3]int{{3, 2, 3}, {3, 4, 5}}
+
+	fmt.Println("numbers1", numbers1) // [[3 2 3] [3 4 5]]
+	fmt.Println("numbers2", numbers2) // [[3 2 3] [3 4 5]]
 
 }
